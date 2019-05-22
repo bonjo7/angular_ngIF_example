@@ -4,7 +4,7 @@
         <div class="ui stacked segment">
 
           <!-- Using ngModel which will set the checkbox to false. -->
-          <input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+          <label><input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/> Tick me</label>
             <!-- Using ngIf to display the paragraph component content. -->
             <span *ngIf="marked"> <app-paragraph></app-paragraph> </span>
 
