@@ -2,14 +2,14 @@
     <div class="ui grid ">
       <div class="ui form sixteen wide column">
         <div class="ui stacked segment">
-<input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
 
-    Checkbox is <span *ngIf="marked"><app-paragraph></app-paragraph></span>
+          <!-- Using ngModel which will set the checkbox to false. -->
+          <input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+            <!-- Using ngIf to display the paragraph component content. -->
+            <span *ngIf="marked"> <app-paragraph></app-paragraph> </span>
 
-    <span *ngIf="!marked">I am not displaying any component here!</span>
-
-
-</div>
-</div>
-</div>
+            <span *ngIf="!marked"><p>I am not displaying any component here!</p></span>
+          </div>
+        </div>
+      </div>
 </section>
